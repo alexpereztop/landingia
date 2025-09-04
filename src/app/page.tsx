@@ -136,11 +136,14 @@ export default function AICourseLanding() {
         <div className="container px-4 md:px-6 relative z-10">
           <div className="text-center space-y-8 max-w-4xl mx-auto">
             <div className="space-y-6 fade-in-up astro-floating">
-              <div className="mx-auto h-20 w-auto astro-glow-effect flex items-center justify-center">
-                <h1 className="text-4xl font-bold text-white astro-text-gradient">
-                  TOP LEARNING
-                </h1>
-              </div>
+              <Image
+                src="/images/Logo-Black.png"
+                alt="TOP LEARNING"
+                width={300}
+                height={120}
+                className="mx-auto h-20 w-auto astro-glow-effect brightness-0 invert"
+                priority
+              />
 
               <div className="space-y-2">
                 <p className="text-secondary font-semibold text-lg tracking-wide uppercase astro-shimmer">
@@ -193,28 +196,28 @@ export default function AICourseLanding() {
               <div className="flex items-center gap-2">
                 <div className="flex -space-x-2">
                   <Image
-                    src="/images/angel-casillas.webp"
+                    src="/images/Ángel Casillas.webp"
                     alt="Ángel Casillas"
                     width={32}
                     height={32}
                     className="w-8 h-8 rounded-full border-2 border-white/50 object-cover"
                   />
                   <Image
-                    src="/images/sofia-kassin.webp"
+                    src="/images/Sofia Kassin.webp"
                     alt="Sofia Kassin"
                     width={32}
                     height={32}
                     className="w-8 h-8 rounded-full border-2 border-white/50 object-cover"
                   />
                   <Image
-                    src="/images/miguel-flores.webp"
+                    src="/images/Miguel Flores.webp"
                     alt="Miguel Flores"
                     width={32}
                     height={32}
                     className="w-8 h-8 rounded-full border-2 border-white/50 object-cover"
                   />
                   <Image
-                    src="/images/wendy-hernandez.webp"
+                    src="/images/Wendy Hernández.webp"
                     alt="Wendy Hernández"
                     width={32}
                     height={32}
@@ -827,12 +830,12 @@ export default function AICourseLanding() {
 
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
             {[
-              { name: "Ángel Casillas", role: "Especialista en IA", image: "/images/angel-casillas.webp" },
-              { name: "Sofia Kassin", role: "Experta en Automatización", image: "/images/sofia-kassin.webp" },
-              { name: "Alexis Perales", role: "Consultor en IA", image: "/images/alexis-perales.webp" },
-              { name: "Mario Villalobos", role: "Analista de Datos", image: "/images/mario-villalobos.webp" },
-              { name: "Perla Arredondo", role: "Especialista en Marketing IA", image: "/images/perla-arredondo.webp" },
-              { name: "Miguel Flores", role: "Desarrollador de Agentes IA", image: "/images/miguel-flores.webp" },
+              { name: "Ángel Casillas", role: "Especialista en IA", image: "/images/Ángel Casillas.webp" },
+              { name: "Sofia Kassin", role: "Experta en Automatización", image: "/images/Sofia Kassin.webp" },
+              { name: "Alexis Perales", role: "Consultor en IA", image: "/images/Alexis Perales.webp" },
+              { name: "Mario Villalobos", role: "Analista de Datos", image: "/images/Mario Villalobos.webp" },
+              { name: "Perla Arredondo", role: "Especialista en Marketing IA", image: "/images/Perla Arredondo.webp" },
+              { name: "Miguel Flores", role: "Desarrollador de Agentes IA", image: "/images/Miguel Flores.webp" },
             ].map((profesor, index) => (
               <Card
                 key={index}
@@ -879,7 +882,7 @@ export default function AICourseLanding() {
                 content:
                   "Este curso cambió completamente mi forma de trabajar. Ahora automatizo tareas que me tomaban horas y puedo enfocarme en estrategia.",
                 rating: 5,
-                image: "/images/wendy-hernandez.webp",
+                image: "/images/Wendy Hernández.webp",
               },
               {
                 name: "Darío Arteaga",
@@ -887,7 +890,7 @@ export default function AICourseLanding() {
                 content:
                   "Sin experiencia técnica previa, logré implementar IA en mi consultora. Mis clientes están impresionados con los resultados.",
                 rating: 5,
-                image: "/images/dario-arteaga.webp",
+                image: "/images/Darío Arteaga.webp",
               },
               {
                 name: "Gerardo Ramos",
@@ -895,7 +898,7 @@ export default function AICourseLanding() {
                 content:
                   "Las herramientas de IA me ayudan a filtrar CVs, crear descripciones de puestos y automatizar procesos. Increíble ROI.",
                 rating: 5,
-                image: "/images/gerardo-ramos.webp",
+                image: "/images/Gerardo Ramos.webp",
               },
             ].map((testimonial, index) => (
               <Card
@@ -1057,11 +1060,13 @@ export default function AICourseLanding() {
         <div className="container px-4 md:px-6">
           <div className="text-center space-y-8">
             <div className="space-y-4">
-              <div className="mx-auto h-12 w-auto flex items-center justify-center mb-4">
-                <h3 className="text-3xl font-bold bg-gradient-to-r from-[#6a6ae2] to-secondary bg-clip-text text-transparent">
-                  TOP LEARNING
-                </h3>
-              </div>
+              <Image
+                src="/images/Logo-Black.png"
+                alt="TOP LEARNING"
+                width={200}
+                height={80}
+                className="mx-auto h-12 w-auto brightness-0 invert mb-4"
+              />
               <h3 className="text-xl font-bold bg-gradient-to-r from-[#6a6ae2] to-secondary bg-clip-text text-transparent">
                 Síguenos en nuestras redes sociales
               </h3>
