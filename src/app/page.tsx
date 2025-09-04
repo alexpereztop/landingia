@@ -138,8 +138,11 @@ export default function AICourseLanding() {
           )}
         </div>
 
-        {/* Scroll to Top Button */}
-        {showScrollTop && (
+      </div>
+
+      {/* Scroll to Top Button */}
+      {showScrollTop && (
+        <div className="fixed bottom-6 right-6 z-[9999]">
           <Button
             onClick={scrollToTop}
             size="icon"
@@ -147,8 +150,8 @@ export default function AICourseLanding() {
           >
             <ChevronUp className="w-5 h-5 text-white" />
           </Button>
-        )}
-      </div>
+        </div>
+      )}
 
       {/* Hero Section */}
       <section
@@ -701,6 +704,7 @@ export default function AICourseLanding() {
                     <span className="text-muted-foreground">/semana</span>
                   </div>
                   <Badge className="rounded-full bg-[#6a6ae2]/10 text-[#6a6ae2] border-[#6a6ae2]">Total: $5,600</Badge>
+                  <Badge className="rounded-full bg-secondary/10 text-secondary border-secondary">+ $700 Inscripción</Badge>
                 </div>
               </CardHeader>
               <CardContent className="space-y-4">
@@ -741,9 +745,10 @@ export default function AICourseLanding() {
                   <div className="text-sm text-muted-foreground line-through">$1,660 cada 4 semanas</div>
                   <div>
                     <span className="text-4xl font-bold text-secondary">$1,460</span>
-                    <span className="text-muted-foreground">/mes</span>
+                    <span className="text-muted-foreground">/c/4 semanas</span>
                   </div>
                   <Badge className="rounded-full bg-secondary/10 text-secondary border-secondary">Total: $4,980</Badge>
+                  <Badge className="rounded-full bg-[#6a6ae2]/10 text-[#6a6ae2] border-[#6a6ae2]">+ $600 Inscripción</Badge>
                 </div>
               </CardHeader>
               <CardContent className="space-y-4">
@@ -789,7 +794,7 @@ export default function AICourseLanding() {
                     <span className="text-muted-foreground">/una vez</span>
                   </div>
                   <Badge className="rounded-full bg-gradient-to-r from-[#6a6ae2]/10 to-secondary/10 text-[#6a6ae2] border-[#6a6ae2]">
-                    + $500 inscripción
+                    + $500 Inscripción
                   </Badge>
                 </div>
               </CardHeader>
@@ -828,7 +833,31 @@ export default function AICourseLanding() {
             </Card>
           </div>
 
-          <div className="text-center mt-12 space-y-6">
+          <div className="text-center mt-12 space-y-8">
+            {/* Información de formas de pago */}
+            <div className="bg-gradient-to-r from-[#6a6ae2]/10 to-secondary/10 rounded-2xl p-6 max-w-4xl mx-auto">
+              <h3 className="text-2xl font-bold mb-4 text-white">ACEPTAMOS:</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+                <div className="text-center">
+                  <p className="text-lg font-semibold text-white mb-2">MESES SIN INTERESES</p>
+                  <p className="text-sm text-muted-foreground">
+                    *Hasta 3 Meses sin intereses aplica únicamente para pago de CURSO COMPLETO
+                  </p>
+                </div>
+                <div className="flex justify-center items-center gap-4">
+                  <div className="bg-white rounded-lg px-4 py-2 shadow-md">
+                    <span className="text-blue-600 font-bold text-lg">VISA</span>
+                  </div>
+                  <div className="bg-gradient-to-r from-red-500 to-orange-500 rounded-lg px-4 py-2 shadow-md">
+                    <span className="text-white font-bold text-lg">MC</span>
+                  </div>
+                  <div className="bg-blue-700 rounded-lg px-4 py-2 shadow-md">
+                    <span className="text-white font-bold text-sm">AMEX</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
             <Button
               size="lg"
               className="rounded-full text-xl px-16 py-8 bg-gradient-to-r from-[#6a6ae2] to-secondary hover:from-[#6a6ae2]/90 hover:to-secondary/90 text-white font-bold shadow-xl transform hover:scale-105 transition-all duration-300"
@@ -837,7 +866,7 @@ export default function AICourseLanding() {
               Inscríbete por WhatsApp
             </Button>
             <p className="text-sm text-muted-foreground">
-              Aceptamos tarjetas de crédito • Hasta 3 meses sin intereses en curso completo
+              Aceptamos tarjetas de crédito • Todas las inscripciones incluyen acceso completo
             </p>
           </div>
         </div>
