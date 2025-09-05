@@ -323,3 +323,51 @@
     left: 100%;
   }
 }
+
+/* Carrusel de logos IA */
+@keyframes scroll-logos {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-50% - 1rem));
+  }
+}
+
+.animate-scroll-logos {
+  animation: scroll-logos 60s linear infinite;
+}
+
+.ai-logo {
+  filter: grayscale(1) brightness(0.8) opacity(0.7);
+  transition: all 0.3s ease;
+}
+
+.ai-logo:hover {
+  filter: grayscale(0) brightness(1) opacity(1);
+  transform: scale(1.1);
+}
+
+/* Carrusel móvil profesores */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Carrusel desktop profesores */
+@keyframes scroll-professors {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll-professors {
+  animation: scroll-professors 45s linear infinite;
+}
