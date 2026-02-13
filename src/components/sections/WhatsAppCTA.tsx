@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 import { memo } from "react"
 
 // Constants - Moved outside component for better performance
-const WHATSAPP_URL = "https://wa.me/523317876251?text=Vi%20tu%20anuncio%20en%20Google.%20%C2%BFMe%20das%20informaci%C3%B3n%20del%20curso%20de%20IA?%20"
+const WHATSAPP_URL = "https://wa.me/523317876251?text=Vi%20tu%20anuncio%20en%20Google.%20%C2%BFMe%20das%20informaci%C3%B3n%20del%20diplomado%20de%20IA?%20"
 const WHATSAPP_COLOR = "#25d366"
 
 // WhatsApp Icon Component - Extracted for reusability and performance
@@ -44,7 +44,7 @@ const WhatsAppButton = memo(() => (
       target="_blank" 
       rel="noopener noreferrer"
       className="group inline-block"
-      aria-label="Inscribirse al curso por WhatsApp"
+      aria-label="Inscribirse al diplomado por WhatsApp"
     >
       <Button
         size="lg"
