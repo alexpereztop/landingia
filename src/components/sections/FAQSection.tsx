@@ -16,13 +16,13 @@ interface FAQItem {
 const FAQ_DATA: readonly FAQItem[] = [
   {
     id: "faq-1",
-    pregunta: "¿ESTE CURSO ES PARA MÍ?",
+    pregunta: "¿ESTE DIPLOMADO ES PARA MÍ?",
     respuesta: "Sí, si eres profesional, freelancer o emprendedor que busca implementar IA práctica en tu trabajo o negocio. Las clases son por Google Meet con grupos de máximo 150 estudiantes, tendrás compañeros de diferentes sectores e industrias. Contamos con 1 guía experto y 1 tutor que te acompañarán en el proceso. Es 100% online en clases en vivo, 3 horas por semana, entre semana 2 sesiones o fines de semana una sesión con horarios definidos.",
     categoria: 'general'
   },
   {
     id: "faq-2",
-    pregunta: "¿QUÉ HERRAMIENTAS NECESITO PARA TOMAR EL CURSO?",
+    pregunta: "¿QUÉ HERRAMIENTAS NECESITO PARA TOMAR EL DIPLOMADO?",
     respuesta: "Una laptop o computadora es indispensable, ya que usaremos software en navegadores web. Necesitas: Google Chrome actualizado, acceso a Google Meet, una cuenta de correo Gmail, conexión estable a internet, cámara y micrófono (pueden ser los integrados de tu laptop). La mayoría de las herramientas de IA que usaremos tienen versiones gratuitas o periodos de prueba.",
     categoria: 'tecnico'
   },
@@ -74,7 +74,7 @@ const SectionHeader = memo(function SectionHeader() {
         </h2>
       </div>
       <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto text-pretty leading-relaxed">
-        Resolvemos las dudas más comunes sobre nuestro curso de Inteligencia Artificial
+        Resolvemos las dudas más comunes sobre nuestro diplomado de Inteligencia Artificial
       </p>
     </header>
   )
@@ -140,7 +140,7 @@ const FAQAccordion = memo(function FAQAccordion() {
         type="single" 
         collapsible 
         className="space-y-4 sm:space-y-6"
-        aria-label="Preguntas frecuentes sobre el curso de Inteligencia Artificial"
+        aria-label="Preguntas frecuentes sobre el diplomado de Inteligencia Artificial"
       >
         {FAQ_DATA.map((faq, index) => (
           <FAQItemComponent 
@@ -162,10 +162,10 @@ const FAQCallToAction = memo(function FAQCallToAction() {
           ¿Tienes más preguntas?
         </h3>
         <p className="text-white/80 mb-6 leading-relaxed">
-          Nuestro equipo está disponible para resolver cualquier duda adicional que tengas sobre el curso.
+          Nuestro equipo está disponible para resolver cualquier duda adicional que tengas sobre el diplomado.
         </p>
         <a
-          href="https://wa.me/523317876251?text=Hola,%20tengo%20preguntas%20sobre%20el%20curso%20de%20IA"
+          href="https://wa.me/523317876251?text=Hola,%20tengo%20preguntas%20sobre%20el%20diplomado%20de%20IA"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 px-6 py-3 bg-[#25d366] hover:bg-[#128c7e] text-white font-semibold rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg"
