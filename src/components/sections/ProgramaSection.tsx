@@ -13,15 +13,6 @@ const PDF_COLOR = "#F29F0E"
 const TOTAL_AI_TOOLS = 31
 const MOBILE_VISIBLE_TOOLS = 24
 
-// Types
-interface ModuleItem {
-  readonly id: string
-  readonly numero: string
-  readonly titulo: string
-  readonly subtitulo: string
-  readonly items: readonly string[]
-}
-
 // Module data -ELIMINADA
 
 // Utility functions
