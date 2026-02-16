@@ -225,7 +225,7 @@ const HeroSection = memo(() => {
 
               <div className="space-y-2">
                 <p className="text-secondary font-semibold text-lg tracking-wide uppercase astro-shimmer">
-                  Diplomado de Inteligencia Artificial y n8n
+                  Diplomado de Inteligencia Artificial
                 </p>
                 
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-white text-balance leading-tight">
@@ -235,8 +235,7 @@ const HeroSection = memo(() => {
                 </h1>
                 
                 <p className="text-lg sm:text-xl md:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed px-4">
-                  Aprende a usar las herramientas de IA más poderosas para automatizar tu trabajo y aumentar tu
-                  productividad.
+                  Aprende a usar las herramientas de IA más poderosas, domina n8n para automatizar tu trabajo, aumentar tu productividad y destacar en tu carrera profesional.
                 </p>
               </div>
 
