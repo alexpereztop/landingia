@@ -8,7 +8,7 @@ import { memo } from "react"
 
 // Constants - Moved outside component for better performance
 const WHATSAPP_URL = "https://wa.me/523317876251?text=Vi%20tu%20anuncio%20en%20Google.%20%C2%BFMe%20das%20informaci%C3%B3n%20del%20diplomado%20de%20IA?%20"
-const PDF_URL = "https://toplearning.academy/wp-content/uploads/2025/09/Curso-Inteligencia-Artificial-Top-Learning.pdf"
+const PDF_URL = "https://toplearning.academy/wp-content/uploads/2026/02/TEMARIO-INTELIGENCIA-ARTIFICIAL-Y-AUTOMATIZACION-CON-n8n-DIPLOMADO-1.pdf"
 
 // Types
 type StatColor = "primary" | "secondary"
