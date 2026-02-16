@@ -8,7 +8,7 @@ import Image from "next/image"
 import { memo } from "react"
 
 // Constants - Moved outside component for better performance
-const PDF_URL = "https://toplearning.academy/wp-content/uploads/2025/09/Curso-Inteligencia-Artificial-Top-Learning.pdf"
+const PDF_URL = "https://toplearning.academy/wp-content/uploads/2026/02/TEMARIO-INTELIGENCIA-ARTIFICIAL-Y-AUTOMATIZACION-CON-n8n-DIPLOMADO-1.pdf"
 const PDF_COLOR = "#F29F0E"
 const TOTAL_AI_TOOLS = 31
 const MOBILE_VISIBLE_TOOLS = 24
