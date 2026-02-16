@@ -160,7 +160,6 @@ export default function ProgramaSection() {
           <MobileGrid />
         </div>
 
-        <ModulesAccordion />
         <DownloadButton />
       </div>
     </section>
