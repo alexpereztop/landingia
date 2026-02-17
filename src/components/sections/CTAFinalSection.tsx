@@ -6,8 +6,8 @@ import { Timer, Download } from "lucide-react"
 import { memo } from "react"
 
 // Constants - Moved outside component for better performance
-const WHATSAPP_URL = "https://wa.me/523317876251?text=Vi%20tu%20anuncio%20en%20Google.%20%C2%BFMe%20das%20informaci%C3%B3n%20del%20curso%20de%20IA?%20"
-const PDF_URL = "https://toplearning.academy/wp-content/uploads/2025/09/Curso-Inteligencia-Artificial-Top-Learning.pdf"
+const WHATSAPP_URL = "https://wa.me/523317876251?text=Vi%20tu%20anuncio%20en%20Google.%20%C2%BFMe%20das%20informaci%C3%B3n%20del%20diplomado%20de%20IA?%20"
+const PDF_URL = "https://toplearning.academy/wp-content/uploads/2026/02/TEMARIO-INTELIGENCIA-ARTIFICIAL-Y-AUTOMATIZACION-CON-n8n-DIPLOMADO-1.pdf"
 const WHATSAPP_COLOR = "#25d366"
 const PDF_COLOR = "#F29F0E"
 const STUDENT_COUNT = "2,500"
@@ -68,7 +68,7 @@ const WhatsAppButton = memo(function WhatsAppButton() {
       target="_blank" 
       rel="noopener noreferrer"
       className="inline-block w-full sm:w-auto"
-      aria-label="Solicitar información del curso por WhatsApp"
+      aria-label="Solicitar información del diplomado por WhatsApp"
     >
       <Button
         size="lg"
@@ -89,7 +89,7 @@ const PDFButton = memo(function PDFButton() {
       target="_blank" 
       rel="noopener noreferrer"
       className="inline-block w-full sm:w-auto"
-      aria-label="Descargar PDF completo del programa del curso"
+      aria-label="Descargar PDF completo del programa del diplomado"
     >
       <Button
         variant="outline"

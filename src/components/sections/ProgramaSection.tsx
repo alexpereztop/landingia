@@ -8,83 +8,12 @@ import Image from "next/image"
 import { memo } from "react"
 
 // Constants - Moved outside component for better performance
-const PDF_URL = "https://toplearning.academy/wp-content/uploads/2025/09/Curso-Inteligencia-Artificial-Top-Learning.pdf"
+const PDF_URL = "https://toplearning.academy/wp-content/uploads/2026/02/TEMARIO-INTELIGENCIA-ARTIFICIAL-Y-AUTOMATIZACION-CON-n8n-DIPLOMADO-1.pdf"
 const PDF_COLOR = "#F29F0E"
 const TOTAL_AI_TOOLS = 31
 const MOBILE_VISIBLE_TOOLS = 24
 
-// Types
-interface ModuleItem {
-  readonly id: string
-  readonly numero: string
-  readonly titulo: string
-  readonly subtitulo: string
-  readonly items: readonly string[]
-}
-
-// Module data
-const COURSE_MODULES: readonly ModuleItem[] = [
-  {
-    id: "modulo-1",
-    numero: "M1",
-    titulo: "FUNDAMENTOS (Semanas 1-2)",
-    subtitulo: "Domina la comunicación con IA como un profesional",
-    items: [
-      "Conocer y dominar los mejores chatbots del momento (ChatGPT, Deepseek, Claude, Gemini y más)",
-      "Generar contenido escrito y documentos de calidad (emails, propuestas, informes)",
-      "Hacer investigación profunda en minutos lo que antes te tomaba horas",
-      "Crear prompts efectivos que te den exactamente lo que necesitas"
-    ]
-  },
-  {
-    id: "modulo-2",
-    numero: "M2",
-    titulo: "CREACIÓN AUDIOVISUAL (Semanas 3-5)",
-    subtitulo: "Conviértete en diseñador, editor y productor multimedia con IA",
-    items: [
-      "Crear imágenes profesionales para tu trabajo o negocio (logos, banners, ilustraciones)",
-      "Generar videos promocionales sin cámara ni experiencia en edición",
-      "Producir audio y locuciones en diferentes voces e idiomas",
-      "Diseñar presentaciones impactantes que compitan con agencias creativas"
-    ]
-  },
-  {
-    id: "modulo-3",
-    numero: "M3",
-    titulo: "AUTOMATIZACIÓN (Semanas 6-8)",
-    subtitulo: "Libérate de tareas repetitivas con automatización inteligente",
-    items: [
-      "Conectar diferentes aplicaciones para que trabajen juntas automáticamente",
-      "Automatizar flujos de trabajo desde emails hasta actualizaciones de bases de datos",
-      "Crear disparadores inteligentes que activen actions según condiciones específicas",
-      "Escalar tu capacidad sin contratar más personal"
-    ]
-  },
-  {
-    id: "modulo-4",
-    numero: "M4",
-    titulo: "AGENTES INTELIGENTES (Semanas 9-12)",
-    subtitulo: "Clónate y crea empleados virtuales que atiendan 24/7",
-    items: [
-      "Entrenar chatbots personalizados con el conocimiento específico de tu negocio",
-      "Crear asistentes especializados para ventas, atención al cliente y soporte técnico",
-      "Configurar múltiples canales (web, WhatsApp, redes sociales y llamadas telefónicas)",
-      "Establecer escalamientos inteligentes cuando el bot no puede resolver algo"
-    ]
-  },
-  {
-    id: "modulo-5",
-    numero: "M5",
-    titulo: "ANÁLISIS E INTELIGENCIA ESTRATÉGICA (Semanas 13-14)",
-    subtitulo: "Convierte datos en decisiones más inteligentes",
-    items: [
-      "Analizar grandes volúmenes de datos y extraer insights accionables",
-      "Crear dashboards inteligentes que se actualicen automáticamente",
-      "Generar predicciones sobre tendencias de tu mercado y comportamiento de clientes",
-      "Tomar decisiones informadas con reportes automáticos y recomendaciones de IA"
-    ]
-  }
-] as const
+// Module data -ELIMINADA
 
 // Utility functions
 const generateLogoImagePath = (index: number): string => 
@@ -189,103 +118,6 @@ const MobileGrid = memo(function MobileGrid() {
   )
 })
 
-const ModuleItem = memo(function ModuleItem({ 
-  module, 
-  index 
-}: { 
-  module: ModuleItem
-  index: number 
-}) {
-  const moduleId = `module-${module.id}`
-  const contentId = `content-${module.id}`
-
-  return (
-    <AccordionItem 
-      value={module.id} 
-      className="astro-card astro-border-gradient rounded-xl px-4 md:px-8 hover:shadow-lg transition-all duration-300"
-    >
-      <AccordionTrigger 
-        className="text-left hover:no-underline py-4 md:py-6 group"
-        aria-describedby={contentId}
-      >
-        <div className="flex items-start gap-2 sm:gap-3 md:gap-6">
-          <Badge 
-            className="astro-button-primary rounded-full px-2 py-1 text-xs font-bold text-white flex-shrink-0 group-hover:scale-105 transition-transform duration-200"
-            aria-label={`Módulo ${module.numero}`}
-          >
-            {module.numero}
-          </Badge>
-          <div className="text-left flex-1 min-w-0">
-            <h3 
-              id={moduleId}
-              className="font-bold text-sm sm:text-lg md:text-xl text-white leading-tight"
-            >
-              {module.titulo}
-            </h3>
-            <p className="text-secondary font-medium text-xs sm:text-sm mt-1">
-              {module.subtitulo}
-            </p>
-          </div>
-        </div>
-      </AccordionTrigger>
-      <AccordionContent 
-        id={contentId}
-        className="pt-3 pb-4 md:pt-4 md:pb-8"
-        aria-labelledby={moduleId}
-      >
-        <div className="space-y-3 md:space-y-4 text-white/90">
-          <p className="text-base md:text-lg font-semibold mb-3 md:mb-4">
-            Aprenderás a usar IA para:
-          </p>
-          <ul 
-            className="grid gap-3 md:grid-cols-2"
-            role="list"
-            aria-label={`Objetivos de aprendizaje del ${module.titulo}`}
-          >
-            {module.items.map((item, itemIndex) => (
-              <li 
-                key={itemIndex} 
-                className="flex items-start gap-3"
-                role="listitem"
-              >
-                <CheckCircle 
-                  className="w-5 h-5 text-secondary mt-1 flex-shrink-0" 
-                  aria-hidden="true"
-                />
-                <span className="text-sm sm:text-base leading-relaxed">
-                  {item}
-                </span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </AccordionContent>
-    </AccordionItem>
-  )
-})
-
-const ModulesAccordion = memo(function ModulesAccordion() {
-  return (
-    <div className="max-w-5xl mx-auto">
-      <Accordion 
-        type="single" 
-        collapsible 
-        defaultValue="modulo-1" 
-        className="space-y-4 md:space-y-6"
-        aria-label="Módulos del programa de Inteligencia Artificial"
-      >
-        {COURSE_MODULES.map((module, index) => (
-          <ModuleItem 
-            key={module.id} 
-            module={module} 
-            index={index}
-          />
-        ))}
-      </Accordion>
-    </div>
-  )
-})
-
 const DownloadButton = memo(function DownloadButton() {
   return (
     <div className="text-center mt-12">
@@ -328,7 +160,6 @@ export default function ProgramaSection() {
           <MobileGrid />
         </div>
 
-        <ModulesAccordion />
         <DownloadButton />
       </div>
     </section>

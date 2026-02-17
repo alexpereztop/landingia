@@ -7,8 +7,8 @@ import Image from "next/image"
 import { memo } from "react"
 
 // Constants - Moved outside component for better performance
-const WHATSAPP_URL = "https://wa.me/523317876251?text=Vi%20tu%20anuncio%20en%20Google.%20%C2%BFMe%20das%20informaci%C3%B3n%20del%20curso%20de%20IA?%20"
-const PDF_URL = "https://toplearning.academy/wp-content/uploads/2025/09/Curso-Inteligencia-Artificial-Top-Learning.pdf"
+const WHATSAPP_URL = "https://wa.me/523317876251?text=Vi%20tu%20anuncio%20en%20Google.%20%C2%BFMe%20das%20informaci%C3%B3n%20del%20diplomado%20de%20IA?%20"
+const PDF_URL = "https://toplearning.academy/wp-content/uploads/2026/02/TEMARIO-INTELIGENCIA-ARTIFICIAL-Y-AUTOMATIZACION-CON-n8n-DIPLOMADO-1.pdf"
 
 // Types
 type StatColor = "primary" | "secondary"
@@ -25,7 +25,7 @@ interface CourseStat {
 const COURSE_STATS: readonly CourseStat[] = [
   {
     icon: Clock,
-    value: "42 HRS",
+    value: "84 HRS",
     description: "de clases prácticas",
     color: "primary",
     delay: "0s"
@@ -39,7 +39,7 @@ const COURSE_STATS: readonly CourseStat[] = [
   },
   {
     icon: BookOpen,
-    value: "14 Semanas",
+    value: "28 Semanas",
     description: "3 horas por semana",
     color: "primary",
     delay: "2s"
@@ -78,7 +78,7 @@ WhatsAppIcon.displayName = "WhatsAppIcon"
 // Student Avatars Component - Extracted for better organization
 const StudentAvatars = memo(() => (
   <div className="flex items-center gap-2">
-    <div className="flex -space-x-2" role="group" aria-label="Estudiantes del curso">
+    <div className="flex -space-x-2" role="group" aria-label="Estudiantes del diplomado">
       {STUDENT_AVATARS.map((student, index) => (
         <Image
           key={student.alt}
@@ -225,7 +225,7 @@ const HeroSection = memo(() => {
 
               <div className="space-y-2">
                 <p className="text-secondary font-semibold text-lg tracking-wide uppercase astro-shimmer">
-                  Curso de Inteligencia Artificial
+                  Diplomado de Inteligencia Artificial
                 </p>
                 
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-white text-balance leading-tight">
@@ -235,8 +235,7 @@ const HeroSection = memo(() => {
                 </h1>
                 
                 <p className="text-lg sm:text-xl md:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed px-4">
-                  Aprende a usar las herramientas de IA más poderosas para automatizar tu trabajo, aumentar tu
-                  productividad y destacar en tu carrera profesional.
+                  Aprende a usar las herramientas de IA más poderosas, domina n8n para automatizar tu trabajo, aumentar tu productividad y destacar en tu carrera profesional.
                 </p>
               </div>
 
