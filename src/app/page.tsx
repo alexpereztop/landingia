@@ -10,15 +10,27 @@ import ProfesoresSection from "@/components/sections/ProfesoresSection"
 import FAQSection from "@/components/sections/FAQSection"
 import CTAFinalSection from "@/components/sections/CTAFinalSection"
 import FooterSection from "@/components/sections/FooterSection"
+import ContactFormModal from "@/components/forms/ContactFormModal"
+import ThankYouModal from "@/components/forms/ThankYouModal"
+import { useFormModal } from "@/hooks/useFormModal"
 
 export default function AICourseLanding() {
+  const {
+    isContactFormOpen,
+    isThankYouOpen,
+    openContactForm,
+    closeContactForm,
+    openThankYou,
+    closeThankYou
+  } = useFormModal()
+
   return (
     <div className="min-h-screen bg-background w-full">
       {/* Navegación Flotante */}
       <FloatingNavigation />
 
       {/* Hero Section con Estadísticas Flotantes */}
-      <HeroSection />
+      <HeroSection onOpenContactForm={openContactForm} />
 
       {/* Diferenciadores */}
       <DiferenciadoresSection />
@@ -30,7 +42,7 @@ export default function AICourseLanding() {
       <PerfilesSection />
 
       {/* Programa */}
-      <ProgramaSection />
+      <ProgramaSection onOpenContactForm={openContactForm} />
 
       {/* Profesores */}
       <ProfesoresSection />
@@ -39,10 +51,21 @@ export default function AICourseLanding() {
       <FAQSection />
 
       {/* CTA Final */}
-      <CTAFinalSection />
+      <CTAFinalSection onOpenContactForm={openContactForm} />
 
       {/* Footer */}
       <FooterSection />
+
+      {/* Modales de formulario */}
+      <ContactFormModal
+        isOpen={isContactFormOpen}
+        onClose={closeContactForm}
+        onSuccess={openThankYou}
+      />
+      <ThankYouModal
+        isOpen={isThankYouOpen}
+        onClose={closeThankYou}
+      />
     </div>
   )
 }

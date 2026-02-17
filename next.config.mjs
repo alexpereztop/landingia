@@ -2,11 +2,11 @@
 const nextConfig = {
   images: {
     unoptimized: false,
-    remotePatterns: [],
+    remotePatterns: []
   },
   experimental: {
-    optimizePackageImports: ['lucide-react']
+    optimizePackageImports: ["lucide-react"]
   }
-};
+}
 
-export default nextConfig;
+export default nextConfig

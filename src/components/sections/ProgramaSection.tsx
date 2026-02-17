@@ -118,33 +118,36 @@ const MobileGrid = memo(function MobileGrid() {
   )
 })
 
-const DownloadButton = memo(function DownloadButton() {
+interface DownloadButtonProps {
+  onOpenContactForm?: () => void
+}
+
+const DownloadButton = memo(function DownloadButton({ onOpenContactForm }: DownloadButtonProps) {
   return (
     <div className="text-center mt-12">
-      <a 
-        href={PDF_URL}
-        target="_blank" 
-        rel="noopener noreferrer"
-        className="inline-block"
+      <Button
+        type="button"
+        size="lg"
+        onClick={onOpenContactForm}
+        className="rounded-full text-sm sm:text-base md:text-lg px-4 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6 font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 text-white w-full max-w-xs mx-auto group astro-button-secondary"
+        style={{ backgroundColor: PDF_COLOR, borderColor: PDF_COLOR }}
         aria-label="Descargar PDF completo del programa del curso"
       >
-        <Button
-          size="lg"
-          className="rounded-full text-sm sm:text-base md:text-lg px-4 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6 font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 text-white w-full max-w-xs mx-auto group astro-button-secondary"
-          style={{ backgroundColor: PDF_COLOR, borderColor: PDF_COLOR }}
-        >
-          <Download 
-            className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform duration-200" 
-            aria-hidden="true"
-          />
-          Descargar PDF del programa
-        </Button>
-      </a>
+        <Download 
+          className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform duration-200" 
+          aria-hidden="true"
+        />
+        Descargar PDF del programa
+      </Button>
     </div>
   )
 })
 
-export default function ProgramaSection() {
+interface ProgramaSectionProps {
+  onOpenContactForm?: () => void
+}
+
+export default function ProgramaSection({ onOpenContactForm }: ProgramaSectionProps) {
   return (
     <section 
       id="programa" 
@@ -160,7 +163,7 @@ export default function ProgramaSection() {
           <MobileGrid />
         </div>
 
-        <DownloadButton />
+        <DownloadButton onOpenContactForm={onOpenContactForm} />
       </div>
     </section>
   )

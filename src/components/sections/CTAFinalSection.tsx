@@ -7,7 +7,6 @@ import { memo } from "react"
 
 // Constants - Moved outside component for better performance
 const WHATSAPP_URL = "https://wa.me/523317876251?text=Vi%20tu%20anuncio%20en%20Google.%20%C2%BFMe%20das%20informaci%C3%B3n%20del%20diplomado%20de%20IA?%20"
-const PDF_URL = "https://toplearning.academy/wp-content/uploads/2026/02/TEMARIO-INTELIGENCIA-ARTIFICIAL-Y-AUTOMATIZACION-CON-n8n-DIPLOMADO-1.pdf"
 const WHATSAPP_COLOR = "#25d366"
 const PDF_COLOR = "#F29F0E"
 const STUDENT_COUNT = "2,500"
@@ -82,41 +81,48 @@ const WhatsAppButton = memo(function WhatsAppButton() {
   )
 })
 
-const PDFButton = memo(function PDFButton() {
+interface PDFButtonProps {
+  onOpenContactForm?: () => void
+}
+
+const PDFButton = memo(function PDFButton({ onOpenContactForm }: PDFButtonProps) {
   return (
-    <a 
-      href={PDF_URL}
-      target="_blank" 
-      rel="noopener noreferrer"
-      className="inline-block w-full sm:w-auto"
+    <Button
+      type="button"
+      variant="outline"
+      size="lg"
+      onClick={onOpenContactForm}
+      className="rounded-full text-base sm:text-lg md:text-xl px-6 sm:px-8 md:px-12 py-4 sm:py-6 md:py-8 font-bold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 w-full text-white group astro-button-secondary inline-flex"
+      style={{ backgroundColor: PDF_COLOR, borderColor: PDF_COLOR }}
       aria-label="Descargar PDF completo del programa del diplomado"
     >
-      <Button
-        variant="outline"
-        size="lg"
-        className="rounded-full text-base sm:text-lg md:text-xl px-6 sm:px-8 md:px-12 py-4 sm:py-6 md:py-8 font-bold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 w-full text-white group astro-button-secondary"
-        style={{ backgroundColor: PDF_COLOR, borderColor: PDF_COLOR }}
-      >
-        <Download 
-          className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3 group-hover:scale-110 transition-transform duration-200" 
-          aria-hidden="true"
-        />
-        Descargar PDF del programa
-      </Button>
-    </a>
+      <Download 
+        className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3 group-hover:scale-110 transition-transform duration-200" 
+        aria-hidden="true"
+      />
+      Descargar PDF del programa
+    </Button>
   )
 })
 
-const CTAButtons = memo(function CTAButtons() {
+interface CTAButtonsProps {
+  onOpenContactForm?: () => void
+}
+
+const CTAButtons = memo(function CTAButtons({ onOpenContactForm }: CTAButtonsProps) {
   return (
     <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center px-4">
       <WhatsAppButton />
-      <PDFButton />
+      <PDFButton onOpenContactForm={onOpenContactForm} />
     </div>
   )
 })
 
-export default function CTAFinalSection() {
+interface CTAFinalSectionProps {
+  onOpenContactForm?: () => void
+}
+
+export default function CTAFinalSection({ onOpenContactForm }: CTAFinalSectionProps) {
   return (
     <section 
       className="py-16 md:py-24 astro-hero-gradient relative overflow-hidden"
@@ -131,7 +137,7 @@ export default function CTAFinalSection() {
           
           <div className="space-y-6 sm:space-y-8">
             <PromotionBadge />
-            <CTAButtons />
+            <CTAButtons onOpenContactForm={onOpenContactForm} />
           </div>
         </div>
       </div>

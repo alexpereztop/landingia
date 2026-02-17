@@ -150,7 +150,11 @@ const StatItem = memo(({ stat }: { stat: CourseStat }) => {
 StatItem.displayName = "StatItem"
 
 // CTA Buttons Component - Extracted for better organization
-const CTAButtons = memo(() => (
+interface CTAButtonsProps {
+  onOpenContactForm?: () => void
+}
+
+const CTAButtons = memo(({ onOpenContactForm }: CTAButtonsProps) => (
   <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
     <a 
       href={WHATSAPP_URL}
@@ -169,30 +173,29 @@ const CTAButtons = memo(() => (
       </Button>
     </a>
     
-    <a 
-      href={PDF_URL}
-      target="_blank" 
-      rel="noopener noreferrer"
-      className="group"
+    <Button
+      type="button"
+      variant="outline"
+      size="lg"
+      onClick={onOpenContactForm}
+      className="rounded-full text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 astro-card border-white/30 text-white hover:bg-white/20 font-semibold shadow-xl backdrop-blur-sm transition-all duration-300 bg-transparent w-full sm:w-auto hover:scale-105 focus:scale-105 focus:outline-none focus:ring-2 focus:ring-[#F29F0E]/50 group"
+      style={{ backgroundColor: "#F29F0E", borderColor: "#F29F0E", color: "white" }}
       aria-label="Descargar PDF del programa del curso"
     >
-      <Button
-        variant="outline"
-        size="lg"
-        className="rounded-full text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 astro-card border-white/30 text-white hover:bg-white/20 font-semibold shadow-xl backdrop-blur-sm transition-all duration-300 bg-transparent w-full sm:w-auto hover:scale-105 focus:scale-105 focus:outline-none focus:ring-2 focus:ring-[#F29F0E]/50"
-        style={{ backgroundColor: "#F29F0E", borderColor: "#F29F0E", color: "white" }}
-      >
-        <Download className="w-5 h-5 mr-2" aria-hidden="true" />
-        Descargar PDF del programa
-      </Button>
-    </a>
+      <Download className="w-5 h-5 mr-2" aria-hidden="true" />
+      Descargar PDF del programa
+    </Button>
   </div>
 ))
 
 CTAButtons.displayName = "CTAButtons"
 
 // Main Hero Section Component
-const HeroSection = memo(() => {
+interface HeroSectionProps {
+  onOpenContactForm?: () => void
+}
+
+const HeroSection = memo(({ onOpenContactForm }: HeroSectionProps) => {
   return (
     <>
       {/* Hero Section */}
@@ -245,7 +248,7 @@ const HeroSection = memo(() => {
             </div>
 
             {/* CTA Buttons */}
-            <CTAButtons />
+            <CTAButtons onOpenContactForm={onOpenContactForm} />
 
             {/* Social Proof */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-8 pt-8">
