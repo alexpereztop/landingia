@@ -165,7 +165,7 @@ const FAQCallToAction = memo(function FAQCallToAction() {
           Nuestro equipo está disponible para resolver cualquier duda adicional que tengas sobre el diplomado.
         </p>
         <a
-          href="https://wa.me/523317876251?text=Hola,%20tengo%20preguntas%20sobre%20el%20diplomado%20de%20IA"
+          href="https://wa.me/523311957725?text=Hola,%20tengo%20preguntas%20sobre%20el%20diplomado%20de%20IA"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 px-6 py-3 bg-[#25d366] hover:bg-[#128c7e] text-white font-semibold rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg"
